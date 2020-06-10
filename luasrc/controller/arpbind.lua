@@ -9,6 +9,5 @@ function index()
 	if not nixio.fs.access("/etc/config/arpbind") then
 		return
 	end
-	entry({"admin", "custom"}, firstchild(), "我的", 89).dependent = false
-	entry({"admin", "custom", "arpbind"}, cbi("arpbind"), _("IP/MAC Binding"), 2).dependent = true
+	entry({"admin", "network", "arpbind"}, cbi("arpbind"), _("IP/MAC Binding"), 45).dependent = true
 end
